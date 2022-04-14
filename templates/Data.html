@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>DATA</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="../static/TrangChu.css">
+              <style>
+         table, th, td {
+            border: 1px solid crimson;
+         }
+      </style>
+</head>
+<body style="background-image: url('static/background.jpg');
+	background-position: top;
+	background-attachment: fixed;
+    background-size: cover;">
+<div class="splash">
+		<h1 class="fade-in">Load Data</h1>
+	</div>
+<script src="../static/app.js"></script>
+<div class="search_wrap">
+<div class="header_text">
+    <div class="header">
+				<p class="header-name">DATA</p>
+			</div>
+			<div class="option">
+				<div class="option-btn">
+					<button class="btn-item"><a class="link" href ="/Introduction">Introduction</a></button>
+					<button class="btn-itemed"><a class="linked" href ="/Data">Data</a></button>
+					<button class="btn-item"><a class="link" href ="/Predict">Predict Text</a></button>
+					<button class="btn-item"><a class="link" href ="/FilePredict">Input File</a></button>
+					<button class="btn-item"><a class="link" href ="/JSchart">Statistic</a></button>
+				</div>
+			</div>
+
+
+</div>
+</br>
+    </br>
+
+</div>
+<div class="container">
+  <table style="width: 95%; margin-left: 40px; margin-bottom: 40px;">
+        <thead>
+            <tr>
+              <th class="id_col_header">ID</th>
+              <th class="cate_col_header">CATEGORY</th>
+              <th class="til_col_header">TITLE</th>
+              <th class="des_col_header">DESCRIPTION</th>
+<!--              <th class="cont_col_header">CONTENT</th>-->
+              <th class="more_col_header">MORE</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+        {% for new in data %}
+            <tr>
+                <td class="id_col_cont">{{new.STT}}</td>
+                <td class="cate_col_cont">{{new.theloai}}</td>
+                <td class="til_col_cont">{{new.title}}</td>
+                <td class="des_col_cont">{{new.sumary}}</td>
+<!--                <td class="cont_col_cont">{{new.content}}</td>-->
+                <td class="more_col_cont"> <a href="/news/{{new.id}}">Read more</a></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+<p class="page"> Page {{ id }}</p>
+    <button class="btn-prev" href ="/Data1"><a class="link_pre" href ="/Data1">First Page</a></button>
+{% if id > 1 %}
+<!--<a href="/get/{{ id - 1}}">Pre</a>-->
+<button class="btn-prev" href ="/Data{{id - 1}}"><a class="link_pre" href ="/Data{{id - 1}}">Previous Page</a></button>
+{% endif %}
+<!--<a href="/get/{{ id + 1}}">Next</a>-->
+    {% if id <150 %}
+<button class="btn-prev" href ="/Data{{id + 1}}"><a class="link_pre" href ="/Data{{id + 1}}">Next Page</a></button>
+     {% endif %}
+    <button class="btn-prev" href ="/Data150"><a class="link_pre" href ="/Data646">Last Page</a></button>
+    <br />
+<button class="btn-prev" href ="/"><a class="link_pre" href ="/">HomePage</a></button>
+</div>
+
+</body>
+</html>

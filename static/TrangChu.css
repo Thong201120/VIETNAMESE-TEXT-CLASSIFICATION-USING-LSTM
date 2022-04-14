@@ -1,0 +1,536 @@
+.splash {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background: black;
+	z-index: 200;
+	color: white;
+	text-align: center;
+	line-height: 90vh;
+	font-family: 'Century Gothic';
+}
+
+.splash.display-none {
+	position: fixed;
+	opacity: 0;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background: black;
+	z-index: -100;
+	color: white;
+	text-align: center;
+	line-height: 90vh;
+	transition: all 0.5s;
+}
+
+@keyframes fadeIn {
+	to{
+		opacity: 1;
+	}
+}
+
+.fade-in {
+	opacity: 0;
+	animation: fadeIn 1s ease-in forwards;
+}
+
+.chung {
+	top: 0;
+	width: 100%;
+	height: 1080px;
+	margin: 0 auto;
+	background-image: url('../IMAGE/background.jpg');
+	background-position: center;
+    background-size: cover;
+
+}
+.wrap {
+	width: 100%;
+	
+}
+
+.container {
+	width: 100%;
+	text-align: center;
+	margin: 0 auto;
+	height: 900px;
+}
+
+.header {
+	width: 100%;
+	height: 50px;
+	margin: 0 auto;
+}
+
+.header-name {
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-size:  40px;
+	color: white;
+}
+
+.team{
+	width: 100%;
+	height: 100px;
+	background-color: transparent;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.header-team {
+	height: 110px;
+	width: 400px;
+	margin: 0 auto;
+	text-align: center;
+	border:  solid 3px white;
+	border-radius: 20px;
+	margin-bottom: 20px;
+}
+
+.team img {
+	padding-top: 10px;
+	width: 200px;
+	height: auto;
+}
+
+.header-team-name {
+	color: white;
+	font-family:  'Century Gothic';
+	font-size: 35px;
+}
+
+.header-team p {
+	color: white;
+	font-family:  'Century Gothic';
+	font-size: 20px;
+}
+
+.about-name {
+    margin-top: 100px;
+    color: white;
+	font-family:  'Century Gothic';
+	font-size: 35px;
+
+}
+.wrap_about
+{
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 160px;
+    height: 450px;
+}
+
+.about {
+    width: 60%;
+    text-align: justify;
+    margin: 0 auto;
+    border:  solid 3px white;
+    border-radius: 20px;
+    height: auto;
+    color: white;
+    font-size: 20px;
+    font-family:  'Century Gothic';
+    padding-left: 20px;
+    padding-right: 20px;g
+}
+
+.option {
+	width: 100%;
+	height: 100px;
+	background-color: transparent;
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 0px;
+}
+
+.header-option-name {
+	color: white;
+	font-family:  'Century Gothic';
+	font-size: 35px;
+}
+
+.option-btn {
+	width: 100%;
+	height: 100px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.btn-item {
+	width: 200px;
+	background-color: transparent;
+	text-align: center;
+	color: white;
+	border: solid 2px white;
+	font-family: courier new;
+	border-radius: 20px;
+	font-size: 20px;
+	height: 40px;
+	margin: 10px;
+}
+
+.btn-item1 {
+	width: 200px;
+	background-color: transparent;
+	text-align: center;
+	color: black;
+	border: solid 2px black;
+	font-family: courier new;
+	border-radius: 20px;
+	font-size: 20px;
+	height: 40px;
+	margin: 10px;
+}
+
+.btn-itemed {
+	width: 200px;
+	background-color: white;
+	text-align: center;
+	color: crimson;
+	border: solid 2px white;
+	font-family: courier new;
+	border-radius: 20px;
+	font-size: 20px;
+	height: 40px;
+	margin: 10px;
+}
+
+.btn-item:hover {
+	width: 220px;
+	background-color: white;
+	text-align: center;
+	color:crimson;
+	border: solid 2px white;
+	font-family: courier new;
+	font-size: 25px;
+	border-radius: 20px;
+	height: 40px;
+	margin: 10px;
+	font-weight: bold;
+	transition: all 0.5s ease;
+}
+
+.btn-item1:hover {
+	width: 220px;
+	background-color: white;
+	text-align: center;
+	color:crimson;
+	border: solid 2px white;
+	font-family: courier new;
+	font-size: 25px;
+	border-radius: 20px;
+	height: 40px;
+	margin: 10px;
+	font-weight: bold;
+	transition: all 0.5s ease;
+}
+
+.link {
+    text-decoration: none;
+    color: white;
+}
+
+.link1 {
+    text-decoration: none;
+    color: black;
+}
+.linked {
+    text-decoration: none;
+    color: crimson;
+}
+
+.link:hover {
+color: crimson;
+transition: all 0.5s ease;}
+
+
+.btn-prev {
+	width: 200px;
+	background-color: transparent;
+	text-align: center;
+	color: crimson;
+	border: solid 2px white;
+	border-radius: 20px;
+	font-family:  'Century Gothic';
+	font-size: 20px;
+	height: 40px;
+	margin: 10px;
+}
+
+.btn-prev:hover {
+	width: 200px;
+	background-color: white;
+	text-align: center;
+	color:crimson;
+	border: solid 2px crimson;
+	border-radius: 20px;
+	font-family:  'Century Gothic';
+	font-size: 20px;
+	height: 40px;
+	margin: 10px;
+	transition: all 0.5s ease;
+}
+
+
+
+.link_pre {
+    text-decoration: none;
+    color: white;
+}
+
+.link_pre:hover {
+color: crimson;}
+
+.id_col_header {
+    width: 50px;
+    font-size: 18px;
+    color: black;
+    background-color: white;
+    font-family: 'Roboto Mono', monospace;
+    border: 1px solid transparent;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+}
+
+.id_col_cont {
+    width: 50px;
+    color: white;
+    font-family:  'Century Gothic';
+    border: 1px solid transparent;
+    border-bottom-color: gray;
+    border-right-color: gray;
+}
+
+
+.cate_col_header {
+    width: 100px;
+    font-size: 18px;
+    color: black;
+    background-color: white;
+    font-family:  'Roboto Mono', monospace;
+    padding-right: 20px;
+    border: 1px solid transparent;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+}
+
+
+.cate_col_cont {
+    width: 100px;
+    color: white;
+    font-family:  'Roboto Mono', monospace;
+       border: 1px solid transparent;
+    border-bottom-color: gray;
+    border-right-color: gray;
+}
+
+.til_col_header {
+    width: 100px;
+    font-size: 18px;
+    color: black;
+    background-color: white;
+    font-family:  'Roboto Mono', monospace;
+    border: 1px solid transparent;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+}
+
+.til_col_cont {
+    width: 200px;
+    color: white;
+    font-family:  'Roboto Mono', monospace;
+   text-align: center;
+        border: 1px solid transparent;
+    border-bottom-color: gray;
+    border-right-color: gray;
+}
+
+.des_col_header {
+    width: 200px;
+    font-size: 18px;
+    color: black;
+    background-color: white;
+    font-family:  'Roboto Mono', monospace;
+    border: 1px solid transparent;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+
+}
+
+.des_col_cont {
+    width: 400px;
+    color: white;
+    font-family:  'Roboto Mono', monospace;
+    padding: 10px;
+    text-align: justify;
+    border: 1px solid transparent;
+    border-bottom-color: gray;
+    border-right-color: gray;
+}
+
+.cont_col_header {
+    width: 500px;
+    font-size: 18px;
+    color: black;
+    background-color: white;
+    font-family:  'Roboto Mono', monospace;
+    border: 1px solid transparent;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+}
+
+.cont_col_cont {
+    width:500px;
+    color: white;
+    font-family:  'Roboto Mono', monospace;
+    text-align: center;
+    height:80px;
+    display: block;
+    overflow-y: auto;
+    border-color: transparent;
+    border: 1px solid transparent;
+    border-bottom-color: gray;
+    border-right-color: gray;
+    padding: 10px;
+}
+
+.more_col_header
+{
+    width: 100px;
+    font-size: 18px;
+    color: black;
+    background-color: white;
+    font-family:  'Roboto Mono', monospace;
+    border: 1px solid transparent;
+    border-bottom-color: transparent;
+
+}
+
+.more_col_cont
+{
+    text-decoration: none;
+    width: 100px;
+    color: white;
+    height: 30px;
+    font-family:  'Roboto Mono', monospace;
+    text-align: center;
+    border: 1px solid transparent;
+    border-bottom-color: gray;
+}
+.search_wrap {
+width: 95%;
+margin: 0 auto;
+margin-top: 20px;
+margin-bottom: 20px;
+}
+.header_text
+{
+text-align: center;
+height: 80px;
+}
+
+
+.header_text p
+{
+    color: white;
+    font-family:  'Century Gothic';
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.new_wrap {
+    width: 93%;
+    margin: 0 auto;
+}
+
+.new_header {
+    font-size: 30px;
+    text-align: center;
+    font-family:  'Century Gothic';
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: black;
+}
+
+.new_title {
+    font-size: 40px;
+    text-align: center;
+    font-family:  verdana;
+    padding-top: 20px;
+    color: crimson;
+}
+
+.new_cate {
+    font-size: 25px;
+    text-align: center;
+    font-family:  verdana;
+    color: gray;
+}
+
+.new_desc {
+    font-size: 20px;
+    text-align: justify;
+    font-family:  'Roboto Mono', monospace;
+}
+
+.new_cont {
+    font-size: 16px;
+    text-align: justify;
+    font-family:  'Roboto Mono', monospace;
+}
+
+.page {
+color: white;
+font-size: 25px;
+font-family:'Century Gothic';
+}
+
+.img {
+	padding-top: 10px;
+	width: 200px;
+	height: auto;
+}
+
+.align-page{
+margin: 0 auto;
+margin-top: 20px;
+padding-top: 2500px;
+text-align: center;
+
+}
+
+.nhap {
+color: white;
+font-size: 25px;
+font-family:  'Roboto Mono', monospace;
+}
+
+.covercomment {
+width: 80%;
+margin: 0 auto;
+}
+.comment {
+color: white;
+font-size: 16px;
+text-align: left;
+font-family:  'Roboto Mono', monospace;
+}
+
+.result
+{
+height: 60px;
+width: 400px;
+outline: none;
+border: 2px solid  white;
+border-radius: 20px;
+background-color: transparent;
+text-align: center;
+color: white;
+font-size: 19px;
+font-family: 'Roboto Mono', monospace;
+padding-top: 20px;
+}

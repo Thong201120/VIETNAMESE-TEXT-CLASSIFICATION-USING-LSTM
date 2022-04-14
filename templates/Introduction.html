@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Text and Web Mining</title>
+<link rel="stylesheet" type="text/css" href="../static/TrangChu.css">
+	<script src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+	google.charts.load('current', {'packages':['corechart']});
+      google.charts.load('current', {'packages':['line']});
+      // Draw the pie chart for Sarah's pizza when Charts is loaded.
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+        ["Thể loại", "Số lượng", { role: "style" } ],
+        ["Du lịch", 2099, "DarkSeaGreen"],
+        ["Giáo dục", 2181, "DarkSeaGreen"],
+        ["Giải trí", 2273, "DarkSeaGreen"],
+        ["Khoa học", 2153, "DarkSeaGreen"],
+        ["Kinh doanh", 2112, "DarkSeaGreen"],
+        ["Pháp luật", 2084, "DarkSeaGreen"],
+        ["Số hóa", 2083, "DarkSeaGreen"],
+        ["Sức khỏe", 2141, "DarkSeaGreen"],
+        ["Thế giới", 2051, "DarkSeaGreen"],
+        ["Thể thao", 2122, "DarkSeaGreen"],
+        ["Thời sự", 2197, "DarkSeaGreen"],
+        ["Tâm sự", 2121, "DarkSeaGreen"],
+        ["Xe", 2137, "DarkSeaGreen"],
+        ["Ý kiến", 2189, "DarkSeaGreen"],
+        ["Đời sống", 2364, "DarkSeaGreen"],
+      ]);
+
+      var view = new google.visualization.DataView(data);
+      view.setColumns([0, 1,
+                       { calc: "stringify",
+                         sourceColumn: 1,
+                         type: "string",
+                         role: "annotation" },
+                       2]);
+
+      var options = {
+        title: "BIỂU ĐỒ THỐNG KÊ SỐ LƯỢNG BÀI BÁO PHÂN THEO THỂ LOẠI",
+        width: 1200,
+        height: 900,
+        fontSize: 16,
+        bar: {groupWidth: "95%"},
+        legend: { position: "none", textStyle: {color: 'white'}, },
+        titleTextStyle: {color: 'white',  },
+        backgroundColor: 'transparent',
+        hAxis: {
+        title: 'Thể loại',
+        textStyle: {
+        color: 'white',
+      	},
+      	titleTextStyle:{color: 'white'},
+    	textPosition: 'none',
+    	gridlines: {
+        color: "white"
+    },
+    baselineColor: '#CCCCCC'
+},
+vAxis:{
+		title: 'Số lượng',
+         baselineColor: 'white',
+         gridlineColor: 'white',
+         titleTextStyle:{color: 'white'},
+          color: 'white',
+          textStyle: {
+        color: 'white',
+      	},
+       }
+
+      };
+      var chart = new google.visualization.ColumnChart(document.getElementById('columnchart_values'));
+      chart.draw(view, options);
+  }
+
+	</script>
+</head>
+
+<body style="background-image: url('static/background.jpg');
+	background-position: top;
+	background-attachment: fixed;
+    background-size: cover;">
+	<form action = "http://localhost:5000" method = "post">
+	<div class="chung" >
+	<div class="splash">
+		<h1 class="fade-in">Introduction</h1>
+	</div>
+	<div class="wrap">
+		<div class="container">
+
+			<div class="header">
+				<p class="header-name">Introduction</p>
+			</div>
+			<div class="option">
+				<div class="option-btn">
+					<button class="btn-itemed"><a class="linked" href ="/Introduction">Introduction</a></button>
+					<button class="btn-item"><a class="link" href ="/Data">Data</a></button>
+					<button class="btn-item"><a class="link" href ="/Predict">Predict Text</a></button>
+					<button class="btn-item"><a class="link" href ="/FilePredict">Input File</a></button>
+					<button class="btn-item"><a class="link" href ="/JSchart">Statistic</a></button>
+				</div>
+			</div>
+			<div class="team">
+				<p class="header-team-name">Team</p>
+				<div class="header-team">
+
+					<p>Nguyen Minh Thong</p>
+					<p>Nguyen Minh Trong</p>
+
+				</div>
+				<img src="../static/line.png"/>
+			</div>
+
+			<div class="wrap_about">
+				<p class="about-name">Giới thiệu đề tài</p>
+				<div class="about">
+					<p>Tên đề tài: Phân lớp văn bản tiếng Việt bằng phương pháp học sâu LSTM</p>
+					<p>Bộ dữ liệu được lấy từ nội dung các trang báo của báo VnExpress</p>
+					<p>Bộ dữ liệu bao gồm 15 phân lớp tương ứng với các chủ đề bao gồm: Du lịch, Giáo dục, Giải trí, Khoa học, Kinh doanh, Pháp luật, Số hóa, Sức khỏe, Thế giới, Thể thao, Thời sự, Tâm sự, Xe, Ý kiến, Đời sống.</p>
+					<p>Ứng dụng web gồm 5 phần:</p>
+					<p>- Giới thiệu về thành viên nhóm, bộ dữ liệu và các thao tác với bộ dữ liệu</p>
+					<p>- Nội dung của bộ dữ liệu</p>
+					<p>- Dự đoán phân lớp</p>
+					<p>- Đọc từ file</p>
+					<p>- Thống kê</p>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+	<div style="width:80%; padding-top:150px; margin: 0 auto;">
+					 <div id="columnchart_values"></div>
+				</div>
+	<script src="../static/app.js"></script>
+	</div>
+	</form>
+
+</body>
+</html>

@@ -1,0 +1,397 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Text and Web Mining</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../static/TrangChu.css">
+	<script src="https://www.gstatic.com/charts/loader.js"></script>
+	    <script type="text/javascript">
+
+      // Load Charts and the corechart package.
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.load('current', {'packages':['line']});
+      // Draw the pie chart for Sarah's pizza when Charts is loaded.
+      google.charts.setOnLoadCallback(drawSarahChart);
+
+      // Draw the pie chart for the Anthony's pizza when Charts is loaded.
+      google.charts.setOnLoadCallback(drawAnthonyChart);
+
+      google.charts.setOnLoadCallback(drawChart);
+
+      google.charts.setOnLoadCallback(drawChartline);
+
+      google.charts.setOnLoadCallback(lineHeight);
+
+      // Callback that draws the pie chart for Sarah's pizza.
+      function drawSarahChart() {
+
+        // Create the data table for Sarah's pizza.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Topping');
+        data.addColumn('number', 'Slices');
+        data.addRows([
+          ['Du lịch', 1708],
+          ['Giáo dục', 1726],
+          ['Giải trí', 1817],
+          ['Khoa học', 1731],
+          ['Kinh doanh', 1687],
+          ['Pháp luật', 1641],
+          ['Số hóa', 1660],
+          ['Sức khỏe', 1697],
+          ['Thế giới', 1661],
+          ['Thể thao', 1675],
+          ['Thời sự', 1763],
+          ['Tâm sự', 1687],
+          ['Xe', 1685],
+          ['Ý kiến', 1776],
+          ['Đời sống', 1931],
+        ]);
+
+        // Set options for Sarah's pie chart.
+
+        var options = {title:'BIỂU ĐỒ TRÒN TỈ LỆ PHẦN TRĂM DỮ LIỆU HUẤN LUYỆN',
+                       width:800,
+                       height:600,
+                      pieSliceTextStyle: {
+            color: 'black'
+        },
+colors: ['MediumSpringGreen', 'LemonChiffon','HoneyDew', 'Aquamarine', 'LightCoral','LightSeaGreen', 'MediumOrchid', 'MediumPurple', 'PeachPuff','SkyBlue', 'YellowGreen', 'Thistle', 'Tan', 'Salmon','LightYellow'],
+    titleTextStyle: {
+        color: 'white',  },
+
+    legend: {
+    textStyle: {
+        color: 'white',}
+    },
+
+
+      // Colors the entire chart area, simple version
+      // backgroundColor: '#FF0000',
+      // Colors the entire chart area, with opacity
+      backgroundColor: 'transparent',
+                       };
+
+        // Instantiate and draw the chart for Sarah's pizza.
+        var chart = new google.visualization.PieChart(document.getElementById('Sarah_chart_div'));
+        chart.draw(data, options);
+      }
+
+      // Callback that draws the pie chart for Anthony's pizza.
+      function drawAnthonyChart() {
+
+        // Create the data table for Anthony's pizza.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Topping');
+        data.addColumn('number', 'Slices');
+        data.addRows([
+          ['Du lịch', 391],
+          ['Giáo dục', 455],
+          ['Giải trí', 456],
+          ['Khoa học', 422],
+          ['Kinh doanh', 425],
+          ['Pháp luật', 443],
+          ['Số hóa', 423],
+          ['Sức khỏe', 444],
+          ['Thế giới', 390],
+          ['Thể thao', 447],
+          ['Thời sự', 434],
+          ['Tâm sự', 434],
+          ['Xe', 452],
+          ['Ý kiến', 413],
+          ['Đời sống', 433],
+        ]);
+
+        // Set options for Anthony's pie chart.
+        var options = {title:'BIỂU ĐỒ TRÒN TỈ LỆ PHẦN TRĂM DỮ LIỆU KIỂM THỬ',
+                       width:800,
+                       height:600,
+                       pieSliceTextStyle: {
+            color: 'black'
+        },
+        titleTextStyle: {
+        color: 'white',  },
+
+    legend: {
+    textStyle: {
+        color: 'white',}
+    },
+
+colors: ['MediumSpringGreen', 'LemonChiffon','HoneyDew', 'Aquamarine', 'LightCoral','LightSeaGreen', 'MediumOrchid', 'MediumPurple', 'PeachPuff','SkyBlue', 'YellowGreen', 'Thistle', 'Tan', 'Salmon','LightYellow'],
+                       chartArea: {
+        backgroundColor: {
+          fill: '#FF0000',
+          fillOpacity: 0
+        },
+      },
+      // Colors the entire chart area, simple version
+      // backgroundColor: '#FF0000',
+      // Colors the entire chart area, with opacity
+      backgroundColor: {
+        fill: '#FF0000',
+        fillOpacity: 0
+      },
+                       };
+
+        // Instantiate and draw the chart for Anthony's pizza.
+        var chart = new google.visualization.PieChart(document.getElementById('Anthony_chart_div'));
+        chart.draw(data, options);
+  }
+
+  function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+        ["Thể loại", "Số lượng", { role: "style" } ],
+        ["Du lịch", 2099, "MediumSpringGreen"],
+        ["Giáo dục", 2181, "MediumSpringGreen"],
+        ["Giải trí", 2273, "MediumSpringGreen"],
+        ["Khoa học", 2153, "MediumSpringGreen"],
+        ["Kinh doanh", 2112, "MediumSpringGreen"],
+        ["Pháp luật", 2084, "MediumSpringGreen"],
+        ["Số hóa", 2083, "MediumSpringGreen"],
+        ["Sức khỏe", 2141, "MediumSpringGreen"],
+        ["Thế giới", 2051, "MediumSpringGreen"],
+        ["Thể thao", 2122, "MediumSpringGreen"],
+        ["Thời sự", 2197, "MediumSpringGreen"],
+        ["Tâm sự", 2121, "MediumSpringGreen"],
+        ["Xe", 2137, "MediumSpringGreen"],
+        ["Ý kiến", 2189, "MediumSpringGreen"],
+        ["Đời sống", 2364, "MediumSpringGreen"],
+      ]);
+
+      var view = new google.visualization.DataView(data);
+      view.setColumns([0, 1,
+                       { calc: "stringify",
+                         sourceColumn: 1,
+                         type: "string",
+                         role: "annotation" },
+                       2]);
+
+      var options = {
+        title: "BIỂU ĐỒ THỐNG KÊ SỐ LƯỢNG BÀI BÁO PHÂN THEO THỂ LOẠI",
+        width: 1200,
+        height: 900,
+        fontSize: 16,
+        bar: {groupWidth: "95%"},
+        legend: { position: "none", textStyle: {color: 'white'}, },
+        titleTextStyle: {color: 'white',  },
+        backgroundColor: 'transparent',
+        hAxis: {
+        title: 'Thể loại',
+        textStyle: {
+        color: 'white',
+      	},
+      	titleTextStyle:{color: 'white'},
+    	textPosition: 'none',
+    	gridlines: {
+        color: "white"
+    },
+    baselineColor: '#CCCCCC'
+},
+vAxis:{
+		title: 'Số lượng',
+         baselineColor: 'white',
+         gridlineColor: 'white',
+         titleTextStyle:{color: 'white'},
+          color: 'white',
+          textStyle: {
+        color: 'white',
+      	},
+       }
+
+      };
+      var chart = new google.visualization.ColumnChart(document.getElementById('columnchart_values'));
+      chart.draw(view, options);}
+
+ function drawChartline() {
+
+      var data = new google.visualization.DataTable();
+      data.addColumn('string', 'Epoch');
+      data.addColumn('number', 'Accuracy');
+
+
+      data.addRows([
+        ["Epoch 1/5",  34.56],
+        ["Epoch 2/5",  85.21],
+        ["Epoch 3/5",  91.87],
+        ["Epoch 4/5",  94.84],
+        ["Epoch 5/5",  96.64],
+      ]);
+
+      var options = {
+        chart: {
+          title: 'ACCURACY',
+        },
+        width: 500,
+        height: 500,
+                fontSize: 20,
+                textAlign: 'center',
+        lineWidth: 10,
+        pointSize: 20,
+       series: {
+  0: {
+      color: 'DarkSeaGreen',
+      lineWidth: 6,
+  }
+},
+        bar: {groupWidth: "95%"},
+        legend: { position: "none", textStyle: {color: 'white'}, },
+        titleTextStyle: {color: 'white',  },
+        backgroundColor: 'transparent',
+        hAxis: {
+        title: 'Epoch',
+        textStyle: {
+        color: 'white',
+      	},
+      	titleTextStyle:{color: 'white'},
+    	textPosition: 'none',
+    	gridlines: {
+        color: "white"
+    },
+    baselineColor: '#CCCCCC'
+},
+vAxis:{
+         baselineColor: 'transparent',
+         gridlineColor: 'transparent',
+         titleTextStyle:{color: 'white'},
+          color: 'white',
+          textStyle: {
+        color: 'white',
+      	},
+       },
+
+      };
+
+      var chart = new google.charts.Line(document.getElementById('linechart_material'));
+
+      chart.draw(data, google.charts.Line.convertOptions(options));
+  }
+
+   function lineHeight() {
+
+      var data = new google.visualization.DataTable();
+      data.addColumn('string', 'Epoch');
+      data.addColumn('number', 'Val_accuracy');
+
+
+      data.addRows([
+        ["Epoch 1/5",  81.62],
+        ["Epoch 2/5",  88.63],
+        ["Epoch 3/5",  90.37],
+        ["Epoch 4/5",  90.44],
+        ["Epoch 5/5",  90.64],
+      ]);
+
+      var options = {
+        chart: {
+			  title: 'VAL ACCURACY',
+        },
+        width: 500,
+        height: 500,
+                fontSize: 20,
+                textAlign: 'center',
+        lineWidth: 10,
+        pointSize: 20,
+       series: {
+  0: {
+      color: 'DarkSeaGreen',
+      lineWidth: 6,
+  }
+},
+        bar: {groupWidth: "95%"},
+        legend: { position: "none", textStyle: {color: 'white'}, },
+        titleTextStyle: {color: 'white',  },
+        backgroundColor: 'transparent',
+        hAxis: {
+        title: 'Epoch',
+        textStyle: {
+        color: 'white',
+      	},
+      	titleTextStyle:{color: 'white'},
+    	textPosition: 'none',
+    	gridlines: {
+        color: "white"
+    },
+    baselineColor: '#CCCCCC'
+},
+vAxis:{
+         baselineColor: 'transparent',
+         gridlineColor: 'transparent',
+         titleTextStyle:{color: 'white'},
+          color: 'white',
+          textStyle: {
+        color: 'white',
+      	},
+       },
+
+      };
+
+      var chart = new google.charts.Line(document.getElementById('linechart_height'));
+
+      chart.draw(data, google.charts.Line.convertOptions(options));
+  }
+    </script>
+</head>
+
+<body style="background-image: url('static/background.jpg');
+	background-position: center;
+	background-attachment: fixed;
+    background-size: cover;">
+	<div class="chung">
+	<div class="splash">
+		<h1 class="fade-in">STATISTIC</h1>
+	</div>
+	<div class="wrap">
+		<div class="container">
+
+			<div class="header">
+				<p class="header-name">STATISTIC</p>
+			</div>
+			<div class="option">
+				<div class="option-btn">
+					<button class="btn-item"><a class="link" href ="/Introduction">Introduction</a></button>
+					<button class="btn-item"><a class="link" href ="/Data">Data</a></button>
+					<button class="btn-item"><a class="link" href ="/Predict">Predict Text</a></button>
+					<button class="btn-item"><a class="link" href ="/FilePredict">Input File</a></button>
+					<button class="btn-itemed"><a class="linked" href ="/JSchart">Statistic</a></button>
+				</div>
+			</div>
+
+			<p class="nhap">BIỂU ĐỒ THỐNG KÊ</p>
+			<hr
+  style="display: block; margin-top: 5px; margin-bottom: 40px; margin-left: auto; margin-right: auto; border-style: inset; border-width: 1px; width: 30%; align: center; color: crimson;" />
+			<div style="display: flex; width: 90%; margin: 0 auto;">
+				<div  style="width:50%;">
+					 <div id="Sarah_chart_div"></div>
+				</div>
+
+				<div  style="width:50%;">
+					 <div id="Anthony_chart_div"></div>
+				</div>
+			</div>
+									<hr style="display: block; margin-top: 5px; margin-bottom: 40px; margin-left: auto; margin-right: auto; border-style: inset; border-width: 1px; width: 70%; align: center; color: crimson;" />
+
+</br></br></br>
+			<div style="display: flex; width: 90%; margin: 0 auto; margin-left: 200px;">
+				<div  style="width:50%;">
+					 <div id="linechart_material"></div>
+				</div>
+
+				<div  style="width:50%;">
+					 <div id="linechart_height"></div>
+				</div>
+			</br></br>
+			</div>
+			<div style="width:80%; padding-top:10px; margin: 0 auto;">
+					 <div id="columnchart_values"></div>
+				</div>S
+			</br></br></br></br></br></br></br>
+			</div>
+		</div>
+
+	</div>
+	<script src="../static/app.js"></script>
+	</div>
+
+</body>
+</html>

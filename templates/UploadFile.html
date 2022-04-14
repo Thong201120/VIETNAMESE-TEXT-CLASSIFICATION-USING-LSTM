@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Text and Web Mining</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../static/TrangChu.css">
+</head>
+
+<body style="background-image: url('static/background.jpg');
+	background-position: center;
+	background-attachment: fixed;
+    background-size: cover;">
+	<div class="chung" >
+	<div class="splash">
+		<h1 class="fade-in">Predict File Input</h1>
+	</div>
+	<div class="wrap">
+		<div class="container">
+
+			<div class="header">
+				<p class="header-name">Predict File Input</p>
+			</div>
+			<div class="option">
+				<div class="option-btn">
+					<button class="btn-item"><a class="link" href ="/Introduction">Introduction</a></button>
+					<button class="btn-item"><a class="link" href ="/Data">Data</a></button>
+					<button class="btn-item"><a class="link" href ="/Predict">Predict text</a></button>
+					<button class="btn-itemed"><a class="linked" href ="/FilePredict">Input File</a></button>
+					<button class="btn-item"><a class="link" href ="/JSchart">Statistic</a></button>
+				</div>
+			</div>
+			<div style="text-align: center; padding-top: 50px; margin: 0 auto;">
+			<form action = "" method = "POST"
+         		enctype = "multipart/form-data">
+				<p class="nhap">CHỌN TỆP DỰ ĐOÁN: </p>
+         	<input style="color: white; background-color: transparent; margin: 0 auto; height: auto; border-radius: 20px; border: 1px solid white; font-size: 18px;  font-family:  'Century Gothic';" type = "file" name = "file" />
+         	</br></br><input  style="height: 35px; width: 150px; outline: none; border: 1px solid crimson; border-radius: 30px; text-align: center; color: white; font-size: 16px; font-family: 'Roboto Mono', monospace; background-color: crimson;" type="submit" value = "Xem kết quả" name ="submit" />
+			</form></div>
+	</div>
+
+	</div>
+	<script src="../static/app.js"></script>
+	</div>
+
+</body>
+</html>

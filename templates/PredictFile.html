@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Text and Web Mining</title>
+<link rel="stylesheet" type="text/css" href="../static/TrangChu.css">
+</head>
+
+<body style="background-image: url('static/background.jpg');
+	background-position: top;
+	background-attachment: fixed;
+    background-size: cover;">
+	<div class="chung" >
+	<div class="splash">
+		<h1 class="fade-in">Predict File Input</h1>
+	</div>
+	<div class="wrap">
+		<div class="container">
+
+			<div class="header">
+				<p class="header-name">Predict File Input</p>
+			</div>
+			<div class="option">
+				<div class="option-btn">
+					<button class="btn-item"><a class="link" href ="/Introduction">Introduction</a></button>
+					<button class="btn-item"><a class="link" href ="/Data">Data</a></button>
+					<button class="btn-item"><a class="link" href ="/Predict">Predict text</a></button>
+					<button class="btn-itemed"><a class="linked" href ="/FilePredict">Input File</a></button>
+					<button class="btn-item"><a class="link" href ="/JSchart">Statistic</a></button>
+				</div>
+			</div>
+			<form action="" method="post" name="nhapthongtin" id="nhapthongtin">
+            <p class="nhap">Nhập vào một đoạn text: </p>
+			<textarea style="height: 200px; padding:15px; line-height:1.5; width: 80%; outline: none; border: 2px solid white; border-radius: 20px; background-color: transparent; text-align: justify; color: white; font-size: 18px; font-family: 'Roboto Mono', monospace;" type="text" name ="text" value="{{text}}">{{text}}</textarea>
+			</br></br><input  style="height: 35px; width: 150px; outline: none; border: 1px solid crimson; border-radius: 30px; text-align: center; color: white; font-size: 16px; font-family: 'Roboto Mono', monospace; background-color: crimson;" type="submit" value = "Xem kết quả" name ="submit" />
+			<p class="nhap">Phân Lớp:</p>
+				<textarea class="result">{{result}}</textarea>
+			</form>
+
+</div>
+	</div>
+	<script src="../static/app.js"></script>
+    </div>
+
+
+
+</body>
+
+</html>
